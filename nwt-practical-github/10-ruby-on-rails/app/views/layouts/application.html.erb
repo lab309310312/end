@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>NWT Rails Task Board</title><meta name="viewport" content="width=device-width,initial-scale=1">
+<%= csrf_meta_tags %><%= csp_meta_tag %>
+<style>
+body{font-family:system-ui,sans-serif;max-width:760px;margin:40px auto;padding:20px;background:#f1f5fb;color:#172033}
+main{background:white;padding:28px;border-radius:14px;box-shadow:0 8px 28px #18294a14}
+input,button{font:inherit;padding:10px;border-radius:7px}input{border:1px solid #bbc7d8;min-width:60%;max-width:100%}
+button{border:0;background:#174ea6;color:white;cursor:pointer}li{padding:12px 0;border-bottom:1px solid #e5eaf2}
+.completed{text-decoration:line-through;color:#667085}.notice{color:#167647}.inline{display:inline}
+</style></head><body><main><% if notice.present? %><p class="notice"><%= notice %></p><% end %><%= yield %></main></body></html>

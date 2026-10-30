@@ -1,0 +1,5 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>JavaScript Integration Practical</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
+<body><main class="panel"><p class="tag">NWT PRACTICAL</p><h1>Student Registration Form</h1><p>Example of HTML structure, CSS styling, and JavaScript validation.</p>
+<form id="studentForm" novalidate><label for="studentName">Full name</label><input id="studentName" name="studentName" type="text" minlength="2" maxlength="60" required>
+<label for="email">Email address</label><input id="email" name="email" type="email" required><button type="submit">Register</button></form>
+<p id="message" role="status" aria-live="polite"></p><section id="result" class="result" hidden><h2>Registration Details</h2><p><strong>Name:</strong> <span id="resultName"></span></p><p><strong>Email:</strong> <span id="resultEmail"></span></p></section></main></body></html>

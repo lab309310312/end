@@ -1,0 +1,15 @@
+<h1>NWT Practical — Rails Task Board</h1>
+<p>A small example of Rails MVC, forms, validations, routes, and database persistence.</p>
+<h2>Add a task</h2>
+<% if @task.errors.any? %><ul><% @task.errors.full_messages.each do |error| %><li><%= error %></li><% end %></ul><% end %>
+<%= form_with model: @task, url: tasks_path do |form| %>
+  <%= form.label :title, "Task title" %><br>
+  <%= form.text_field :title, required: true, maxlength: 120 %>
+  <%= form.submit "Add task" %>
+<% end %>
+<h2>Tasks</h2>
+<% if @tasks.any? %><ul><% @tasks.each do |task| %><li>
+  <span class="<%= 'completed' if task.completed? %>"><%= task.title %></span>
+  <%= button_to(task.completed? ? "Mark active" : "Complete", toggle_task_path(task), method: :patch, class: "inline") %>
+  <%= button_to "Delete", task_path(task), method: :delete, form: { class: "inline", data: { turbo_confirm: "Delete this task?" } } %>
+</li><% end %></ul><% else %><p>No tasks yet. Add one above.</p><% end %>
