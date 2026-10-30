@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aarav Sharma | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#home">Aarav Sharma</a>
+  <button id="menuBtn" aria-label="Toggle menu">Menu</button>
+  <nav id="nav">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <h1>I build clean, working web pages.</h1>
+    <p>Computer Engineering student. Currently learning <span id="typed"></span></p>
+    <a class="btn" href="#projects">See my work</a>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I am a third-year student who likes turning ideas into small, useful tools. I enjoy networking labs, web development and solving problems with code.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="bars">
+      <div class="bar"><span>HTML5</span><div class="track"><div class="fill" data-w="90"></div></div></div>
+      <div class="bar"><span>CSS3</span><div class="track"><div class="fill" data-w="80"></div></div></div>
+      <div class="bar"><span>JavaScript</span><div class="track"><div class="fill" data-w="70"></div></div></div>
+      <div class="bar"><span>Java</span><div class="track"><div class="fill" data-w="65"></div></div></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="proj"><h3>Session Demo</h3><p>Servlet app showing cookies, hidden fields and URL rewriting.</p></article>
+      <article class="proj"><h3>VLAN Lab</h3><p>Packet Tracer network with router-on-a-stick.</p></article>
+      <article class="proj"><h3>Bookshelf</h3><p>Ruby on Rails CRUD application.</p></article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form id="contactForm" novalidate>
+      <label for="n">Name</label><input id="n" required>
+      <label for="e">Email</label><input id="e" type="email" required>
+      <label for="m">Message</label><textarea id="m" rows="4" required></textarea>
+      <button class="btn" type="submit">Send message</button>
+      <p id="msg" role="status"></p>
+    </form>
+  </section>
+</main>
+<footer>&copy; 2026 Aarav Sharma</footer>
+<script src="script.js"></script>
+</body>
+</html>

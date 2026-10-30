@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Task Board</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header>
+    <h1>Task Board</h1>
+    <p id="stats">0 tasks</p>
+  </header>
+  <form id="addForm">
+    <input id="taskInput" placeholder="What needs doing?" autocomplete="off" required>
+    <select id="prio" aria-label="Priority">
+      <option value="low">Low</option>
+      <option value="med" selected>Medium</option>
+      <option value="high">High</option>
+    </select>
+    <button type="submit">Add task</button>
+  </form>
+  <div class="filters">
+    <button class="f active" data-f="all">All</button>
+    <button class="f" data-f="active">Active</button>
+    <button class="f" data-f="done">Done</button>
+    <button id="clearDone">Clear done</button>
+  </div>
+  <ul id="list"></ul>
+  <p id="empty" hidden>No tasks here. Add one above.</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

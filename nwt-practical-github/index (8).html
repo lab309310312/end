@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chai &amp; Co. Menu</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Chai &amp; Co.</h1>
+  <p>Tea, snacks and sweets, made fresh every morning.</p>
+</header>
+
+<div class="toolbar">
+  <div class="tabs" id="tabs">
+    <button class="tab active" data-cat="all">All</button>
+    <button class="tab" data-cat="tea">Tea</button>
+    <button class="tab" data-cat="snack">Snacks</button>
+    <button class="tab" data-cat="sweet">Sweets</button>
+  </div>
+  <input id="search" type="search" placeholder="Search menu" aria-label="Search menu">
+  <button id="cartBtn">Cart (<span id="cartCount">0</span>)</button>
+</div>
+
+<main>
+  <div id="cards" class="cards"></div>
+  <p id="none" hidden>Nothing matches your search.</p>
+</main>
+
+<aside id="cart" class="cart" hidden>
+  <h2>Your order</h2>
+  <ul id="cartList"></ul>
+  <p class="total">Total: <strong id="total">0</strong></p>
+  <button id="close">Close</button>
+</aside>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+:root{--cream:#fff7e6;--brown:#4b2e1e;--chai:#c96f2d;--leaf:#5b7f3a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--brown);font-family:Georgia,serif}
+header{text-align:center;padding:2.5rem 1rem 1rem}
+h1{margin:0;font-size:clamp(2rem,6vw,3.2rem);letter-spacing:.5px}
+header p{margin:.4rem 0 0;font-style:italic}
+.toolbar{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;align-items:center;padding:1rem}
+.tabs{display:flex;gap:.4rem}
+.tab{background:transparent;border:2px solid var(--brown);color:var(--brown);padding:.4rem 1rem;border-radius:999px;font:inherit;cursor:pointer}
+.tab.active{background:var(--brown);color:var(--cream)}
+input[type=search]{padding:.5rem .9rem;border:2px solid var(--brown);border-radius:999px;font:inherit;background:#fff}
+#cartBtn{background:var(--chai);color:#fff;border:0;padding:.55rem 1.1rem;border-radius:999px;font:inherit;cursor:pointer}
+main{max-width:1000px;margin:0 auto;padding:1rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1.1rem}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 3px 10px rgba(75,46,30,.15);display:flex;flex-direction:column;transition:transform .2s}
+.card:hover{transform:translateY(-4px)}
+.swatch{height:110px;display:grid;place-items:center;font-size:3rem}
+.info{padding:.9rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.info h3{margin:0}
+.info small{color:#8a6a55}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:auto}
+.add{background:var(--leaf);color:#fff;border:0;padding:.4rem .8rem;border-radius:8px;font:inherit;cursor:pointer}
+#none{text-align:center}
+.cart{position:fixed;right:0;top:0;bottom:0;width:min(320px,90vw);background:#fff;padding:1.2rem;box-shadow:-6px 0 20px rgba(0,0,0,.25);overflow:auto}
+.cart ul{list-style:none;padding:0}
+.cart li{display:flex;justify-content:space-between;gap:.5rem;padding:.5rem 0;border-bottom:1px dashed #cbb}
+.cart .rm{border:0;background:none;color:#b3261e;cursor:pointer;font-size:1.1rem}
+.total{font-size:1.1rem}
+#close{background:var(--brown);color:#fff;border:0;padding:.5rem 1rem;border-radius:8px;cursor:pointer;font:inherit}
