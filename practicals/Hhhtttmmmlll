@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Page</title>
+  <style>
+    body { text-align: center; font-family: Arial; background: #e0f7fa; }
+    button { padding: 10px 20px; background: green; color: white; border: none; }
+    #msg { color: blue; font-size: 20px; margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <h1>Hello</h1>
+  <button onclick="show()">Click Me</button>
+  <p id="msg"></p>
+
+  <script>
+    function show() {
+      document.getElementById("msg").innerHTML = "Welcome to my page!";
+    }
+  </script>
+</body>
+</html>
